@@ -1,0 +1,21 @@
+.table-row {
+    font-weight: 600;
+}
+
+.table-data-actions {
+    text-align: center;
+}
+
+.table-edit-button {
+    padding: 1px 12px 1px 12px;
+    font-size: 15px;
+    margin-right: 18px;
+}
+
+.table-image {
+    width: 40%;
+}
+
+.table-delete-icon {
+    font-size: 15px;
+}

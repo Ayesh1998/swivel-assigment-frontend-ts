@@ -1,6 +1,5 @@
 import {Navbar} from "react-bootstrap";
 import "./nav-bar-styles.css"
-import {FC} from "react";
 import React from 'react';
 
 //Navbar component

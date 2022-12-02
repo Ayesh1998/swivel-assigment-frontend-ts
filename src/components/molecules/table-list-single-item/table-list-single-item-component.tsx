@@ -26,9 +26,9 @@ const TableListSingleItemComponent:FC<SingleItemProps> = ({_id, id, first_name, 
             <td className="text-center">
                 {
                     (photo !== "" && photo !== undefined && photo !== null) ?
-                        <img src={photo} className="table-image"/> :
+                        <img src={photo} className="table-image" alt=""/> :
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/No-photo-m.png"
-                             className="table-image"/>
+                             className="table-image" alt=""/>
                 }
             </td>
             <td className="align-middle">{first_name}</td>

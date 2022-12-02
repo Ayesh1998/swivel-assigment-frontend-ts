@@ -25,7 +25,6 @@ const http = (headers: object = {}): AxiosInstance => {
   );
 
   axiosInstance.interceptors.response.use(undefined, (err) => {
-    const status = err.response ? err.response.status : null;
     return Promise.reject(err);
   });
 

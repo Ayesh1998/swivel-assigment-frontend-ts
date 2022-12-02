@@ -1,4 +1,5 @@
-export let url = "http://localhost:5000/";
+// export let url = "http://localhost:5000/";
+export let url = "https://swivel-assignment1-backend.herokuapp.com/";
 
 export enum InputFieldsNames{
     FIRST_NAME = "first_name",

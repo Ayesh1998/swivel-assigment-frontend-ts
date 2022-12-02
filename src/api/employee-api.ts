@@ -1,80 +1,53 @@
-import axios from "axios";
-import { url } from "../constants/constants";
 import { EmployeeInterface } from "../models/interfaces";
+import http from "./api-handler";
 
-//calling api endpoint to retrieve employees
-export const fetchEmployeesApi = async () =>  {
-    try {
-        const response = await axios({
-            method: "GET",
-            url: encodeURI(`${url}api/employee`),
-            headers: {
-                "Content-Type": "application/json",
-                "Cache-Control": "max-age=0, private, must-revalidate",
-                Pragma: "no-cache",
-            },
-        });
-        return response?.data;
-    } catch (error) {
+export async function fetchEmployeesApi() {
+  const response = await http()
+    .get("api/employee")
+    .then(function (response) {
+      return response?.data;
+    })
+    .catch(function (error) {
         throw new Error('Fetching employees unsuccessful!');
-    }
+    });
+  return response;
 }
 
 //calling api endpoint to remove an employee
-export const removeEmployeesApi = async (employee: EmployeeInterface) =>  {
-    try {
-        const response = await axios({
-            method: "DELETE",
-            url: encodeURI(`${url}api/employee/${employee._id}`),
-            headers: {
-                "Content-Type": "application/json",
-                "Cache-Control": "max-age=0, private, must-revalidate",
-                Pragma: "no-cache",
-            },
-        })
+export async function removeEmployeesApi(employee: EmployeeInterface) {
+    const response = await http()
+      .delete(`api/employee/${employee._id}`)
+      .then(function (response) {
         return response?.data;
-    } catch (error) {
-        throw new Error('Removing employee unsuccessful!');
-    }
-}
+      })
+      .catch(function (error) {
+        throw new Error("Removing employee unsuccessful!");
+      });
+    return response;
+  }
 
 //calling api endpoint to update an employee
-export const updateEmployeesApi = async (employee: EmployeeInterface) =>  {
-    try {
-        const response = await axios({
-            method: "PUT",
-            url: encodeURI(`${url}api/employee/${employee._id}`),
-            data: employee,
-            headers: {
-                "Content-Type": "application/json",
-                "Cache-Control": "max-age=0, private, must-revalidate",
-                Pragma: "no-cache",
-            },
-        })
-        return response?.data?.updatedEmployee;
-    } catch (error) {
-        throw new Error('Updating employee unsuccessful!');
-    }
-}
+export async function updateEmployeesApi(employee: EmployeeInterface) {
+    const response = await http()
+      .put(`api/employee/${employee._id}`, employee)
+      .then(function (response) {
+        return  response?.data?.updatedEmployee;
+      })
+      .catch(function (error) {
+        throw new Error("Updating employee unsuccessful!");
+      });
+    return response;
+  }
 
 //calling api endpoint to add an employee
-export const addEmployeesApi = async (employee: EmployeeInterface) =>  {
-    try {
-        const response = await axios({
-            method: "POST",
-            url: encodeURI(`${url}api/employee`),
-            data: employee,
-            headers: {
-                "Content-Type": "application/json",
-                "Cache-Control": "max-age=0, private, must-revalidate",
-                Pragma: "no-cache",
-            },
-        })
-        return response?.data?.result;
-    } catch (error) {
-        throw new Error('Adding employee unsuccessful!');
-    }
-}
-
-
-
+export async function addEmployeesApi(employee: EmployeeInterface) {
+    const response = await http()
+      .post(`api/employee`, employee)
+      .then(function (response) {
+        return  response?.data?.result;
+      })
+      .catch(function (error) {
+        throw new Error("Adding employee unsuccessful!");
+      });
+    return response;
+  }

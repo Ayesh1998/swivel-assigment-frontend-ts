@@ -1,16 +1,16 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import React from 'react';
 import Index from "./pages/home";
-import ErrorPage from "./pages/error-page/ErrorPage";
-import NavBar from "./common/nav-bar/nav-bar";
+import NavBar from "./components/atoms/nav-bar/nav-bar";
 import AddEmployeePage from "./pages/add-employee/add-employee-page";
 import EditEmployeePage from "./pages/edit-employee/edit-employee-page";
-import ErrorModalComponent from "./common/error-modal/error-modal-component";
+import ErrorModalComponent from "./components/atoms/error-modal/error-modal-component";
 import {useDispatch, useSelector} from "react-redux";
 import {FC, useEffect} from "react";
 import {RootState} from "./redux/reducers";
 import {bindActionCreators} from "redux";
 import { actionCreators } from './redux';
+import ErrorPage from "./pages/error-page/error-page";
 
 const App:FC= () => {
 

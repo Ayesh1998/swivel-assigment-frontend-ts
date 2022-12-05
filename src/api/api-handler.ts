@@ -1,8 +1,8 @@
 import axios, { AxiosInstance } from "axios";
 
 const http = (headers: object = {}): AxiosInstance => {
-  // let url = process.env.BASE_URL ?? "http://localhost:5000/";
-  let url = process.env.BASE_URL ?? "https://swivel-assignment1-backend.herokuapp.com/";
+  let url = process.env.BASE_URL ?? "http://localhost:5000/";
+  // let url = process.env.BASE_URL ?? "https://swivel-assignment1-backend.herokuapp.com/";
 
   const axiosInstance = axios.create({
     baseURL: url,

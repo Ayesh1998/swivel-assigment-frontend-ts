@@ -22,7 +22,7 @@ const Template: ComponentStory<typeof GridSingleItem> = (args) => {
   );
 };
 
-export const Showing = Template.bind({});
+export const Component = Template.bind({});
 
 // Showing.args = {
 //   first_name: "Ayesh",

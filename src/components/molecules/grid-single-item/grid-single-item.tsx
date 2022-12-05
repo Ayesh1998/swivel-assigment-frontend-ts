@@ -36,11 +36,12 @@ const GridSingleItem: FC<SingleItemProps> = ({
       />
       <Card className="item-card">
         {photo !== "" && photo !== undefined && photo !== null ? (
-          <Card.Img className="item-card-image" variant="top" src={photo} />
+          <Card.Img className="item-card-image" variant="top" alt="personal avatar" src={photo} />
         ) : (
           <Card.Img
             className="item-card-image"
             variant="top"
+            alt="common avatar"
             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/No-photo-m.png"
           />)}
         <Card.Body>

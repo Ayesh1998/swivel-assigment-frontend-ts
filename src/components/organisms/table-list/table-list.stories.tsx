@@ -34,5 +34,5 @@ const Template: ComponentStory<typeof TableListSingleItemComponent> = (args) => 
   )
 } ;
 
-export const Showing = Template.bind({});
+export const Component = Template.bind({});
 

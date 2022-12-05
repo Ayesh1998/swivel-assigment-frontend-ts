@@ -9,5 +9,5 @@ export default {
 
 const Template: ComponentStory<typeof NavBar> = () => <NavBar />;
 
-export const Primary = Template.bind({});
+export const Component = Template.bind({});
 

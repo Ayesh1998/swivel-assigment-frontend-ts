@@ -10,9 +10,9 @@ export default {
 
 const Template: ComponentStory<typeof FormSelectFieldComponent> = (args) => <FormSelectFieldComponent {...args} />;
 
-export const Showing = Template.bind({});
+export const Component = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Showing.args = {
+Component.args = {
   fieldValue: "Male",
   fieldLabel: "Label",
   fieldError: "Error",

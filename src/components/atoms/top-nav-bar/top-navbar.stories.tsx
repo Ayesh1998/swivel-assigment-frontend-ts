@@ -9,6 +9,6 @@ export default {
 
 const Template: ComponentStory<typeof TopNavBarComponent> = (args) => <TopNavBarComponent {...args} />;
 
-export const Showing = Template.bind({});
+export const Component = Template.bind({});
 
 

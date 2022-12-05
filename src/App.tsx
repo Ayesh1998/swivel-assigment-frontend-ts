@@ -21,7 +21,7 @@ const App:FC= () => {
   //retrieving all the employees to redux
   useEffect(() => {
     fetchEmployees();
-  },);
+  }, []);
 
   return (
       <div className="App">

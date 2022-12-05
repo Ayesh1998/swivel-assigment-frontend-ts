@@ -9,9 +9,9 @@ export default {
 
 const Template: ComponentStory<typeof GridSingleItem> = (args) => <GridSingleItem {...args} />;
 
-export const Showing = Template.bind({});
+export const Component = Template.bind({});
 
-Showing.args = {
+Component.args = {
     first_name: "Ayesh",
     last_name: "Lakshan",
     email: "ayesh@gmail.com",

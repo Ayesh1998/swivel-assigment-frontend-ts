@@ -31,6 +31,7 @@ const FormInputFieldComponent: FC<IFormInputFieldComponentProps> = ({
           </Col>
           <Col md={8}>
             <Form.Control
+              data-testid="input field"
               className={fieldError && "input-error"}
               onChange={(e: ChangeEvent<HTMLInputElement>) => inputHandler(e)}
               value={fieldValue}
@@ -39,7 +40,7 @@ const FormInputFieldComponent: FC<IFormInputFieldComponentProps> = ({
               name={fieldName}
             />
           </Col>
-          {fieldError && <InputErrorMessageComponent error={fieldError} />}
+          {fieldError && <InputErrorMessageComponent data-testid="input error" error={fieldError} />}
         </Row>
       </Form.Group>
     </div>

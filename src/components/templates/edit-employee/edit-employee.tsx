@@ -45,7 +45,7 @@ const EditEmployee: FC = () => {
       setGender(filteredEmployee.gender);
       setFilteredEmployee(filteredEmployee);
     }
-  }, []);
+  }, [employees, id]);
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>): void => {
     switch (e.target.name) {
